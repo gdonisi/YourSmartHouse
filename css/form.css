@@ -1,0 +1,94 @@
+body {
+    background-color: var(--primary);
+    font-size: 18px;
+}
+
+.content-wrap {
+    background-color: var(--primary) !important;
+}
+
+.login form {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.create form {
+    width: 340px;
+    margin-left: 20px;
+}
+
+#descrizione {
+    width: 340px;
+}
+
+.box h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.subm {
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: var(--secondary);
+    color: white;
+}
+
+.login {
+    width: 340px;
+}
+
+.create {
+    width: 380px;
+}
+
+.login p {
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 15px;
+    color: black;
+}
+
+.login p a {
+    color: var(--primary);
+}
+
+.alert {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .login form {
+        width: 250px;
+    }
+
+    .create form {
+        width: 286px;
+    }
+
+    #descrizione {
+        width: 286px;
+    }
+
+    .login {
+        width: 280px;
+    }
+
+    .create {
+        width: 320px;
+    }
+}

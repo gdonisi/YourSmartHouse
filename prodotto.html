@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="height=device-height, width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+    <title>Prodotto - YourSmartHouse</title>
+    <meta content="E-Commerce di prodotti smart e domotica" name="description">
+    <link href="icons/favicon.ico" rel="icon" type="image/png"/>
+    <meta content="#0b6ab7" name="theme-color">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/prodotto.css" rel="stylesheet">
+</head>
+<body>
+<div class="page-container">
+
+    <nav>
+        <ul>
+            <li class="logo"><a href="/YourSmartHouse"><img alt="YourSmartHouse" id="hlogo"
+                                                                                     onmouseout="unhover(this);"
+                                                                                     onmouseover="hover(this);"
+                                                                                     src="icons/logo.png"></a>
+            </li>
+            <li class="btn"><img class="icon" id="menu" src="icons/menu.svg"></li>
+            <li class="search-icon">
+                <input id="search" placeholder="Cerca prodotti" type="search">
+                <a class="s-icon" href="search" id="s-icon"><img class="icon" id="svg-search" src="icons/search.svg"></a>
+                <div id="s-res">
+
+                </div>
+            </li>
+            <div class="items">
+                <li><a href="/YourSmartHouse"><img class="icon" src="icons/home.svg"> Home</a>
+                </li>
+                <li><a href="prodotti"><img class="icon" src="icons/bulb.svg"> Shop</a></li>
+                <li><a href="carrello"><img class="icon" src="icons/cart.svg"> Carrello</a></li>
+                <li><a href="login"><img class="icon" src="icons/login.svg"> Login</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <!--
+    <div id="mainSite">
+        <a href="https://gdonisi.com">Back to gdonisi.com</a>
+    </div>
+    -->
+
+    <script>
+        $(document).ready( // Richiesta AJAX per i risultati di ricerca
+            $('#search').keyup(function (e) {
+                $('#s-res').empty();
+                if ($(this).val() != '') { // Se la barra di ricerca non è vuota
+                    $('#s-res').append("<li>Search suggestions are not supported in this demo</li>")
+                } else {
+                    $('#s-res').hide();
+                }
+            })
+        )
+    </script>
+
+
+    <div class="content-wrap">
+        <div class="prod-page">
+
+            <div class="img-container">
+                <img src="images/211622891129354.jpg">
+            </div>
+
+            <div class="elements">
+                <h4>Categoria: <a href="categoria">Iluminazione</a></h4>
+                <h2>Lampadina Smart</h2>
+                <h3>9.99 €</h3>
+
+                <p style="color: red; font-size: 14px">Actual cart is not supported in this demo</p>
+                <form action="#">
+                    <label for="quantita">Quantità:</label>
+                    <select id="quantita" name="quantita">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+                    <button class="button" disabled>Aggiungi al carrello</button>
+                </form>
+
+                <details>
+                    <p>Lampadina LED Smart (luce bianca calda) utilizza sfere da 2700 K con una temperatura del colore
+                        bassa e una luce gialla calda. Il risultato è un'illuminazione soffusa che ti aiuta a rilassarti
+                        e a rendere la tua casa più calda. La luminosità raggiunge i 810 lumen e può essere regolata in
+                        qualsiasi momento. Passa dall'oscurità alla luce diurna premendo un semplice pulsante</p>
+                </details>
+
+            </div>
+
+        </div>
+    </div>
+
+    <button id="backtotop" onclick="topFunction()" title="Torna sù"><img class="icon" src="icons/top.svg"></button>
+    <footer>
+        <div class="footer-content">
+            <table>
+                <tr>
+                    <td><img id="footerlogo" onmouseout="unhover(this);" onmouseover="hover(this);"
+                             src="icons/logo.png"></td>
+                    <td><h3>&nbsp;YourSmartHouse</h3></td>
+                </tr>
+            </table>
+
+            <ul class="socials">
+                <li><a href="mailto:g.donisi1@studenti.unisa.it" target="_blank"><img class="icon" id="em"
+                                                                                      src="icons/email.svg"></a></li>
+                <li><a href="https://www.instagram.com/unisalerno/" target="_blank"><img class="icon" id="ig"
+                                                                                         src="icons/instagram.svg"></a>
+                </li>
+                <li><a href="https://twitter.com/unisalerno" target="_blank"><img class="icon" id="tw"
+                                                                                  src="icons/twitter.svg"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCi3CdtXjmc68QC4uj6xYP4g" target="_blank"><img class="icon"
+                                                                                                            id="yt"
+                                                                                                            src="icons/youtube.svg"></a>
+                </li>
+                <li><a href="https://www.facebook.com/unisalerno" target="_blank"><img class="icon" id="fb"
+                                                                                       src="icons/facebook.svg"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>Leggi la nostra <a href="privacyPolicy" target="_blank">Privacy Policy</a></p>
+            <p>Copyright &copy;2021 YourSmartHouse - Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+    <script>
+        function hover(element) {
+            element.setAttribute('src', 'icons/ylogo.png');
+        }
+
+        function unhover(element) {
+            element.setAttribute('src', 'icons/logo.png');
+        }
+
+        $('.btn #menu').click(function () { //quando viene cliccato il menu
+            let src = $(this).attr('src');
+            if (src == 'icons/menu.svg')
+                $(this).attr("src", "icons/close.svg");
+            else
+                $(this).attr("src", "icons/menu.svg");
+            $('nav ul div.items').toggleClass("show");
+            $(this).toggleClass("show");
+            $('.content-wrap').toggleClass("move");
+            $('footer').toggleClass("move");
+        })
+
+        // bottone per tornare all'inizio della pagina
+        const mybutton = document.getElementById("backtotop");
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</div>
+</body>
+</html>

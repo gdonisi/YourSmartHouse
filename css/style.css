@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-style: normal;
+    src: url("../fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: italic;
+    src: url("../fonts/Poppins-Italic.ttf");
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-style: italic;
+    src: url("../fonts/Poppins-SemiBoldItalic.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    --primary: #0b6ab7;
+    --secondary: #02a9da;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --whitesmoke: #f3f3f3;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    background: var(--primary);
+}
+
+.content-wrap {
+    background: white;
+    padding: 20px 20px 200px 20px; /* bottom 200px perché è l'altezza del footer */
+}
+
+.danger {
+    background: var(--danger);
+    margin-bottom: 5px;
+    border-radius: 3px;
+    color: white;
+}
+
+.danger h2 {
+    font-size: 20px;
+    padding: 4px;
+}
+
+.warning {
+    background: var(--warning);
+}
+
+.success {
+    background: var(--success);
+}
+
+.move {
+    transform: translateY(320px); /* Sposta il contenuto in basso quando viene cliccato il menu */
+}
+
+.content-wrap, footer {
+    transition: .4s;
+}
+
+.paginator {
+    display: inline-grid;
+    list-style-type: none;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    padding: 10px 0;
+}
+
+.paginator > li {
+    text-align: center;
+    width: 36px;
+    border: 1px solid black;
+    padding: .5rem;
+    background-color: var(--primary);
+}
+
+.paginator > li > a {
+    text-decoration: none;
+    color: var(--whitesmoke);
+}
+
+.paginator > li > a:hover {
+    color: #feff5f;
+}
+
+.button {
+    border-radius: 4px;
+    padding: 4px;
+    height: 36px;
+    margin-bottom: 10px;
+    background: var(--primary);
+    color: var(--whitesmoke);
+}
+
+.button:hover, .subm:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+.box {
+    height: auto;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#backtotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    z-index: 99;
+    border: 1px solid black;
+    outline: none;
+    background-color: var(--primary);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+/* Filtri per cambiare il colore di un SVG forniti da https://codepen.io/sosuke/pen/Pjoqqp */
+#svg-search {
+    filter: brightness(0%) saturate(100%); /* colore #000000 */
+    height: 19px;
+    width: 19px;
+    transform: translateY(8px);
+}
+
+#menu {
+    height: 28px;
+    width: 28px;
+}
+
+.icon {
+    filter: invert(99%) sepia(17%) saturate(11%) hue-rotate(211deg) brightness(113%) contrast(91%); /* colore #f3f3f3 */
+    height: 20px;
+    width: 20px;
+    transform: translateY(3px);
+}
+
+.socials img {
+    width: 26px;
+    height: 26px;
+}
+
+#em:hover {
+    filter: brightness(0%) saturate(100%); /* colore #000000 */
+}
+
+#ig:hover {
+    filter: invert(53%) sepia(91%) saturate(3748%) hue-rotate(255deg) brightness(87%) contrast(98%); /* colore #be4bdb */
+}
+
+#tw:hover {
+    filter: invert(62%) sepia(48%) saturate(5098%) hue-rotate(176deg) brightness(97%) contrast(95%); /* colore 1da1f2 */
+}
+
+#yt:hover {
+    filter: invert(13%) sepia(93%) saturate(6690%) hue-rotate(2deg) brightness(98%) contrast(115%); /* colore ff0000 */
+}
+
+#fb:hover {
+    filter: invert(31%) sepia(79%) saturate(2247%) hue-rotate(203deg) brightness(99%) contrast(92%); /* colore #000000 */
+}
+
+#mainSite {
+    width: 256px;
+    transform: translate(-50%, 0);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 99;
+    outline: none;
+    background-color: var(--primary);
+    font-size: 14px;
+    text-align: center;
+}
+
+#mainSite a {
+    color: white;
+}

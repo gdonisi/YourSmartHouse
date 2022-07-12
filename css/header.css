@@ -1,0 +1,190 @@
+nav {
+    background: var(--primary);
+    padding: 4px 5px 2px 20px;
+}
+
+#hlogo {
+    width: 94px;
+    height: 94px;
+}
+
+nav ul { /* Stile degli elementi nell'header */
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li.logo {
+    flex: 1;
+}
+
+nav ul div.items {
+    display: inline-flex;
+    padding-right: 6px;
+}
+
+nav ul div.items a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 10px;
+    color: var(--whitesmoke);
+}
+
+nav ul div.items a:hover {
+    color: #feff5f;
+}
+
+nav ul .search-icon {
+    position: relative;
+    height: 40px;
+    width: 420px;
+    display: flex;
+    background: var(--whitesmoke);
+    border-radius: 5px;
+}
+
+nav ul .search-icon input {
+    height: 100%;
+    width: 380px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+}
+
+nav ul .search-icon .s-icon {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-radius: 0 5px 5px 0;
+}
+
+nav ul .search-icon .s-icon:hover {
+    background: #e6e6e6;
+}
+
+nav ul li.btn {
+    flex: 1;
+    display: none;
+}
+
+#s-res {
+    position: absolute;
+    top: 36px;
+    padding: 0;
+    pointer-events: all;
+    z-index: 2;
+    border-radius: 3px;
+    width: 100%;
+}
+
+#s-res li {
+    list-style: none;
+    width: 100%;
+    cursor: default;
+    padding: 8px 12px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    background: white;
+}
+
+#s-res li a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+#s-res li a:hover {
+    color: var(--primary);
+}
+
+@media screen and (max-width: 800px) {
+
+    nav {
+        z-index: 1;
+        padding: 9px 40px 9px 0;
+        background: var(--primary);
+    }
+
+    .content-wrap {
+        z-index: 0;
+    }
+
+    nav ul li.btn {
+        display: block;
+        margin-left: -50px;
+    }
+
+    nav ul .search-icon {
+        width: 200px;
+    }
+
+    nav ul .search-icon input {
+        width: 160px;
+    }
+
+    nav ul div.items {
+        z-index: -1; /* Sposta gli elementi in profondità dietro l'header */
+        position: fixed;
+        top: -220px; /* Elementi nascosti dalla visualizzazione */
+        right: 0;
+        width: 100%;
+        background: var(--primary);
+        display: inline-block;
+        transition: top .4s;
+    }
+
+    nav ul div.items.show {
+        z-index: 1; /* Rende gli elementi cliccabili spostandoli avanti in profondità */
+        top: 60px; /* Compaiono gli elementi quando viene cliccato il menu */
+    }
+
+    nav ul div.items li {
+        text-align: center;
+        line-height: 30px;
+        margin: 30px 0;
+    }
+
+    nav ul div.items li a {
+        font-size: 19px;
+    }
+
+    #s-res li a {
+        font-size: 14px;
+    }
+
+    #s-res li {
+        padding: 10px 14px;
+    }
+}
+
+@media screen and (max-width: 1086px) {
+    nav {
+        padding: 10px 40px 10px 0;
+    }
+
+    #hlogo {
+        display: none;
+    }
+
+    nav ul div.items {
+        flex: 4;
+    }
+
+    nav ul .search-icon {
+        width: 280px;
+    }
+
+    nav ul .search-icon input {
+        width: 240px;
+    }
+}

@@ -1,0 +1,49 @@
+.prod-page {
+    display: flex;
+}
+
+.img-container {
+    width: 35%;
+}
+
+.img-container img {
+    width: 100%;
+    padding: 5px;
+}
+
+.elements {
+    padding: 10px;
+    width: 65%;
+}
+
+.elements h2, h3, h4 {
+    margin: 10px;
+}
+
+.elements a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.elements form {
+    margin: 10px;
+}
+
+.elements button {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 1086px) {
+    .prod-page {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .img-container {
+        width: clamp(280px, 50%, 480px);
+    }
+
+    .elements {
+        width: 100%;
+    }
+}

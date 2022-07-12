@@ -1,0 +1,23 @@
+.chkout {
+    display: flex;
+}
+
+.user-details, .order-details {
+    width: 50%;
+    margin: 25px;
+}
+
+.user-details span {
+    font-weight: normal;
+}
+
+@media screen and (max-width: 1086px) {
+    .chkout {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .user-details, .order-details {
+        width: 100%;
+    }
+}
